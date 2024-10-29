@@ -12,8 +12,8 @@ router.post('/create-checkout-session', async (req, res) => {
       payment_method_types: ['card'],
       line_items: [{ price: priceId, quantity: 1 }],
       mode: 'subscription',
-      success_url: 'http://localhost:5173/success',
-      cancel_url: 'http://localhost:5173/cancel',
+      success_url: 'https://detroit-web.web.app/success',
+      cancel_url: 'https://detroit-web.web.app/cancel',
     });
     res.json({ id: session.id });
   } catch (error) {
