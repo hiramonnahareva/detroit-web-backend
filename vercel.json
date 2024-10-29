@@ -2,19 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/checkout.js",
+        "src": "./server.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/checkout/(.*)",
-        "dest": "/api/checkout.js"
+        "src": "/(.*)",
+        "destination": "/"
       }
-    ],
-    "env": {
-      "STRIPE_SECRET_KEY": "@stripe-secret-key",
-      "MONGO_URI": "@mongo-uri"
-    }
+    ]
   }
-  
